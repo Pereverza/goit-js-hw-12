@@ -32,7 +32,7 @@ form.addEventListener('submit', async event => {
   }
 
   page = 1;
-  totalHits = 0; // Очищуємо перед новим пошуком
+  totalHits = 0;
   clearGallery();
   btnLoadMore.classList.add('hidden');
   showLoader();
@@ -76,7 +76,7 @@ form.addEventListener('submit', async event => {
 btnLoadMore.addEventListener('click', async () => {
   page++;
   showLoader();
-  btnLoadMore.classList.add('hidden'); // Ховаємо кнопку перед запитом
+  btnLoadMore.classList.add('hidden'); 
 
   try {
     const { hits } = await fetchImages(query, page);
