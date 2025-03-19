@@ -9,9 +9,9 @@ export const fetchImages = async (query, page = 1) => {
       q: query,
       image_type: 'photo',
       orientation: 'horizontal',
-        safesearch: true,
-        pet_page: 15,
-        page,
+      safesearch: true,
+      per_page: 15,
+      page,
     },
   });
 
